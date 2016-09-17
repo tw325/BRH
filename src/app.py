@@ -36,6 +36,11 @@ def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'],
                                filename)
 
+@app.route('/img/<filename>')
+def img(filename):
+    return send_from_directory('img/',
+                               filename)
+
 if __name__ == '__main__':
     app.run(
         host="0.0.0.0",
