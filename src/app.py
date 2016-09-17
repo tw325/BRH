@@ -14,12 +14,13 @@ def allowed_file(filename):
         filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
 
 @app.route('/')
+def home():
+    return render_template('bootstrap.html');
+
+@app.route('/index')
 def index():
     return render_template('index.html')
 
-@app.route('/home')
-def home():
-    return render_template('bootstrap.html')
 
 @app.route('/upload', methods=['POST'])
 def upload():
