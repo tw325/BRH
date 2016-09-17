@@ -1,27 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link href="/static/style.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-    <script src="/static/jquery.js"></script>
-  </head>
-  <body>
+<!--Much of inspiration and code comes from the open-source library of Bootstrap-->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Big Red Kittens Go Take Pictures</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="static/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="static/style.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Big Red Kittens Go Take Pictures</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Top Pictures</a>
+                    </li>
+                    <li>
+                        <a href="#">New Pictures</a>
+                    </li>
+                    <li>
+                        <a href="#">User Sign In</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!--Page Content -->
     <div class="container">
       <div class="header">
         <h1 class="text-muted">Big Red Kittens Go Take Pictures</h1>
       </div>
       <hr/>
-      <div>
+      <div class = "container">
       
       <form action="upload" method="post" enctype="multipart/form-data">
         <input type="file" name="file"><br /><br />
         <input type="submit" value="Upload">
       </form>
       </div>
-    </div>
-    <div>
-   	<h5>MTW</h5>
     </div>
 
   </body>
